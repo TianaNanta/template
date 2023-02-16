@@ -1,12 +1,6 @@
 # template settings
 _subdirectory: "{{template}}"
 _answers_file: .templating.yml
-_exclude: |-
-    {% if venv == "pip" -%}
-    - "pyproject.toml.jinja"
-    {%- else -%}
-    - "requirements.txt.jinja"
-    {%- endif %}
 
 
 # questions
@@ -28,6 +22,10 @@ project_name:
 module_name:
     type: str
     help: What is your Python module name ?
+    validator: >-
+        {% if not (module_name | regex_search('[A-Za-z0-9\_]+$')) %}
+        Module name must contain one or more letters, digits or underscore.
+        {% endif %}
 
 script_name:
     type: str
@@ -67,6 +65,10 @@ package_name:
     type: str
     default: "{{ project_name|lower|replace(' ','_')|replace('-','_') }}"
     when: false
+    validator: >-
+        {% if not (package_name | regex_search('[A-Za-z0-9\_]+$')) %}
+        Package name must contain one or more letters, digits or underscore.
+        {% endif %}
 
 templating_version:
     type: str

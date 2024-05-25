@@ -1,2 +1,4 @@
-# TemplateFastAPI
-This is a FastAPI template using Copier
+# templatipy
+
+Describe your project here.
+* License: MIT

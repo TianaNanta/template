@@ -1,0 +1,31 @@
+[project]
+name = "templatipy"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "TianaNanta", email = "andrianjakananta@gmail.com" }
+]
+dependencies = [
+    "typer[all]>=0.12.3",
+    "copier>=9.2.0",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+"templatipy" = "templatipy:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/templatipy"]

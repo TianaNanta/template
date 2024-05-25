@@ -1,3 +1,6 @@
+from templatipy.cli import app
+
+
 def main() -> int:
-    print("Hello from templatipy!")
+    app()
     return 0

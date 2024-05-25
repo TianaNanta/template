@@ -1,4 +1,6 @@
 import typer
+from templatipy.config import settings
+from rich import print
 
 app = typer.Typer(name="templatipy")
 
@@ -14,3 +16,8 @@ def goodbye(name: str, formal: bool = False):
         print(f"Goodbye Ms. {name}. Have a good day.")
     else:
         print(f"Bye {name}!")
+
+
+@app.command()
+def version():
+    print(f"Templatify [green]v{settings.VERSION}[/green]")

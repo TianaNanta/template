@@ -43,11 +43,16 @@ prompt-toolkit==3.0.36
     # via questionary
 pydantic==2.7.1
     # via copier
+    # via pydantic-settings
 pydantic-core==2.18.2
     # via pydantic
+pydantic-settings==2.2.1
+    # via templatipy
 pygments==2.18.0
     # via copier
     # via rich
+python-dotenv==1.0.1
+    # via pydantic-settings
 pyyaml==6.0.1
     # via copier
     # via jinja2-ansible-filters

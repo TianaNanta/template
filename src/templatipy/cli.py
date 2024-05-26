@@ -1,6 +1,7 @@
 import typer
-from templatipy.config import settings
 from rich import print
+
+from templatipy.config import settings
 
 app = typer.Typer(name="templatipy")
 

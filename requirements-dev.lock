@@ -11,16 +11,28 @@
 -e file:.
 annotated-types==0.7.0
     # via pydantic
+black==24.4.2
+cfgv==3.4.0
+    # via pre-commit
 click==8.1.7
+    # via black
     # via typer
 colorama==0.4.6
     # via copier
 copier==9.2.0
     # via templatipy
+distlib==0.3.8
+    # via virtualenv
 dunamai==1.21.1
     # via copier
+filelock==3.14.0
+    # via virtualenv
+flake8==7.0.0
 funcy==2.0
     # via copier
+identify==2.5.36
+    # via pre-commit
+isort==5.13.2
 jinja2==3.1.4
     # via copier
     # via jinja2-ansible-filters
@@ -30,17 +42,31 @@ markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.5
     # via jinja2
+mccabe==0.7.0
+    # via flake8
 mdurl==0.1.2
     # via markdown-it-py
+mypy-extensions==1.0.0
+    # via black
+nodeenv==1.8.0
+    # via pre-commit
 packaging==24.0
+    # via black
     # via copier
     # via dunamai
 pathspec==0.12.1
+    # via black
     # via copier
+platformdirs==4.2.2
+    # via black
+    # via virtualenv
 plumbum==1.8.3
     # via copier
+pre-commit==3.7.1
 prompt-toolkit==3.0.36
     # via questionary
+pycodestyle==2.11.1
+    # via flake8
 pydantic==2.7.1
     # via copier
     # via pydantic-settings
@@ -48,6 +74,8 @@ pydantic-core==2.18.2
     # via pydantic
 pydantic-settings==2.2.1
     # via templatipy
+pyflakes==3.2.0
+    # via flake8
 pygments==2.18.0
     # via copier
     # via rich
@@ -56,10 +84,14 @@ python-dotenv==1.0.1
 pyyaml==6.0.1
     # via copier
     # via jinja2-ansible-filters
+    # via pre-commit
 questionary==2.0.1
     # via copier
 rich==13.7.1
     # via typer
+ruff==0.4.5
+setuptools==70.0.0
+    # via nodeenv
 shellingham==1.5.4
     # via typer
 typer==0.12.3
@@ -68,5 +100,7 @@ typing-extensions==4.12.0
     # via pydantic
     # via pydantic-core
     # via typer
+virtualenv==20.26.2
+    # via pre-commit
 wcwidth==0.2.13
     # via prompt-toolkit
